@@ -9,16 +9,19 @@ echo Creating project directory…
 say -v "Victoria" Creating project directory…
 
 #creates the directory and all sub-directories
-mkdir -p ~/Documents/Website/$name/{design,wireframes_mockups/{wireframe,mockups/{high,low}},images,code/{js/angular,css/sass/{modules,partials,vendors}}}
+mkdir -p ~/Documents/Website/$name/{designIdeas,wireframes_mockups/{wireframe,mockups/{high,low},sketches},images,code/{js/angular,css/sass/{modules,partials,vendors}}}
 
 #add all the starting files like index.html to the correct folders
+cd ~/Documents/Website/$name/images
+touch imageList.txt #List of all the images used within the project
+
 cd ~/Documents/Website/$name/code
 touch index.html
 cd js
 touch main.js
 cd ..
 cd css
-touch main.css
+touch stylesheet.css
 cd sass
 touch main.scss
 

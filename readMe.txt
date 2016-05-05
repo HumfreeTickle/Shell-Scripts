@@ -38,3 +38,7 @@
 								|
 					       main.scss  —-----|
 
+
+
+- lowerCase: Changes all uppercase letters in a text filename to lowercase
+	     ex. Test.txt —> test.txt
