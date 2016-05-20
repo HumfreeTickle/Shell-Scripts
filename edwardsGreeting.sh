@@ -22,7 +22,7 @@ fi
 #Assigns a particular greeting based on whether it's a weekend or weekday
 if [ \( $day == 'Sunday' \) -o \( $day == 'Saturday' \) ]; then
 dayGreeting="The weekend already. Hope you're not thinking of doing any extraneous work"
-else
+elif [ $h -lt 17 ]; then
 dayGreeting="What's on the agenda for today"
 fi
 
@@ -30,8 +30,10 @@ fi
 echo $greeting sir
 say -v $voice $greeting sir.
 
+if [[ $dayGreeting !=  "" ]];then
 echo $dayGreeting 
 say -v $voice $dayGreeting
+fi
 
 #Loading all other scripts to alias references 
 alias mkwp=mkwp.sh
@@ -40,3 +42,4 @@ alias shutDown=midnightShutDown.sh
 alias movies='cd /Volumes/Edwards_Mac/Movies'
 alias home='cd /Users/Edwards/'
 
+#alias edwardsHelp='echo mkwp, lwrCs, shutDown, movies, home'
