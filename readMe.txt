@@ -42,3 +42,9 @@
 
 - lowerCase: Changes all uppercase letters in a text filename to lowercase
 	     ex. Test.txt —> test.txt
+
+- 80sTextWriting: Designed to emulate the letter by letter text output seen in old school movies. As an added addition, the text is also readout at the same time.
+
+- edwardsGreeting: 
+
+- midnightShutDown.sh: 
