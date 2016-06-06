@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#TODO - add in the ability to not include "" around each word
+# for term in $@; do
+# add to $speech with a space inbetween each addition
+# speech=$speech " " $@
+
 #which voice to use
 voice='Victoria'
 

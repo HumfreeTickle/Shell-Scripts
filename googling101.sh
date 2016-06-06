@@ -6,13 +6,16 @@
 
 # add some form of parsing which can tell
 #    1. if (.com/.ie/etc) is used and instead of putting it through google search, go directly to website
-#    2. add in image recognition; google image ... should search for images rather then websites
+#    2. add in image recognition; google image/ google image of ... should search for images rather then websites
 #    3. maybe a way to track most viewed sites so if I write "google netflix" it'll just add the ".com" and go directly to the website instead.
 
 google() {
 search=""
-echo "Googling: $@"
 
+source ~/shell_scripts/80sTextWriting.sh
+textEcho "Googling: $@"
+
+# takes each entered term and concatinates them together in googles search format
 for term in $@; do
 search="$search%20$term"
 done
