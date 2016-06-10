@@ -42,6 +42,8 @@ cat <<EOT >> index.html
     </body>
 </html>
 EOT
+
+#Added flair just for fun
 textEcho "Html created..."
 
 cd js
@@ -57,6 +59,7 @@ cd sass
 touch main.scss
 textEcho "Sass created..."
 
+# copies my builded up collection of sass modules for ease
 textEcho "Importing modules library..."
 cp -r ~/Documents/Website/sass_module_library/*scss modules/
 
@@ -67,6 +70,7 @@ textEcho "Opening project..."
 #opens google and searches for images related to project 
 open "http://google.com/images?q=$name+website+design+ideas"
 open "http://google.com/images?q=$name+inspiration+design+ideas"
+open "https://www.siteinspire.com/"
 
 #opens all the code files within Sublime Text
 open -a "Sublime Text" ~/Documents/Website/$name/code

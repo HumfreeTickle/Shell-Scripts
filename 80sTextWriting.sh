@@ -15,8 +15,8 @@ function chat(){
 # Calls the two functions within separte shell instance
 # Still need to figure out how to get rid of the "job id's"
 
-textEcho "$1" & writing=$!
-voiceEcho "$1" & speech=$!
+textEcho "$@" & writing=$!
+voiceEcho "$@" & speech=$!
 
 # Stops the functions from preceeding until both have finished
 wait $writing
@@ -27,7 +27,9 @@ wait $speech
 # Adds each individula letter to the terminal shell
 function textEcho(){
 
-input="$1"
+for term in "$@"; do
+input="$input $term"
+done
 size=${#input}
 
 timeDelay=0.04s
@@ -62,7 +64,11 @@ echo ""
 
 # Reads out the text that is being display in the console to the user
 function voiceEcho(){
-input="$1"
-say -v $voice "$1" 
+
+for term in "$@"; do
+input="$input $term"
+done
+
+say -v $voice "$input" 
 
 }
